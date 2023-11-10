@@ -1638,8 +1638,12 @@ html:lang(ru) #header .btn {
     background: url(../images/bg8.jpg) top center no-repeat;
     background-size: cover;
     padding-bottom: 7rem;
-    padding-top: 15rem;
-    position: relative
+    padding-top: 7rem;
+    position: relative;
+}
+
+.about-hero img {
+    border-radius: 0 0 30px 30px;
 }
 
 .about-hero h1 {
@@ -1661,7 +1665,8 @@ html:lang(ru) #header .btn {
     position: relative;
     margin-left: 3rem;
     margin-top: -5rem;
-    line-height: 1.2em
+    line-height: 1.2em;
+    border-radius: 20px;
 }
 
 .about-page {
@@ -1690,6 +1695,14 @@ html:lang(ru) #header .btn {
     background: url(../images/bg9.jpg) top left no-repeat;
     background-size: cover
 }
+
+.about-section1 .box{
+    border-radius: 16px; 
+    /* height: 200px; */
+}
+
+
+
 
 .offer-section {
     background: none
@@ -1785,7 +1798,8 @@ html:lang(ru) #header .btn {
     width: 100%;
     height: 100%;
     background-color: #1f1f1f;
-    z-index: 0
+    z-index: 0;
+    border-radius: 27px;
 }
 
 .about-section .box>.row {
@@ -1816,11 +1830,13 @@ html:lang(ru) #header .btn {
 
 .value-section {
     background-color: #1a1a1a;
-    padding: 4rem 0
+    padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .value-section h2 {
-    font-family: "Source Sans Pro", sans-serif;
+    
     font-size: 2.25rem;
     color: #c3ff43;
     font-weight: 600
@@ -1828,19 +1844,21 @@ html:lang(ru) #header .btn {
 
 .value-section p {
     font-size: 1.375rem;
-    text-align: justify;
+    /* text-align: justify; */
     color: #fff;
     margin-bottom: 2rem
 }
 
 .value-section .image {
-    margin-top: -9rem
+    margin-top: -1rem;
 }
 
 .value-section .btn {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
-    padding: .95rem 3rem
+    padding: .75rem 2rem;
+    font-family: Nasalization Rg, sans-serif;
+    text-transform: uppercase;
 }
 
 .started-steps {
@@ -1875,9 +1893,13 @@ html:lang(ru) #header .btn {
 .started-steps .steps .box {
     background-color: #1b1b1b;
     border: 1px solid #9b9b9b;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 1.5rem 1.5rem;
-    min-height: 320px
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
 }
 
 .started-steps .steps .box.active {
@@ -1913,7 +1935,7 @@ html:lang(ru) #header .btn {
 }
 
 .secured-platform h2 {
-    font-family: "Source Sans Pro", sans-serif;
+    /* font-family: "Source Sans Pro", sans-serif; */
     font-size: 2.5rem;
     color: #c3ff43;
     font-weight: 600;
@@ -2175,7 +2197,7 @@ html:lang(ru) #header .btn {
     }
 
     .about-hero {
-        padding-top: 100px;
+        padding-top: 40px;
         padding-bottom: 4rem
     }
 
@@ -2187,7 +2209,8 @@ html:lang(ru) #header .btn {
     .about-hero .box {
         padding: 1.75rem;
         font-size: 2rem;
-        max-width: 450px
+        max-width: 450px;
+        border-radius: 27px;
     }
 
     .offer-section ul li .box {
@@ -2794,8 +2817,9 @@ html:lang(ru) #header .btn {
     }
 
     .about-hero {
-        padding: 12rem 0 7rem;
-        background-image: url(../images/bg10.jpg)
+        padding: 4rem 0 7rem;
+        background-image: url(../images/bg10.jpg);
+        border-radius:  0 0 27px 27px;
     }
 
     .about-hero h1 {
@@ -2807,7 +2831,8 @@ html:lang(ru) #header .btn {
         margin-top: -3rem;
         padding: 1.25rem;
         font-size: 1.35rem;
-        max-width: 220px
+        max-width: 220px;
+        border-radius: 27px;
     }
 
     .offer-section .container {
