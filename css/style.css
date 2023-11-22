@@ -1217,7 +1217,7 @@ html:lang(ru) #header .btn {
 .join-community {
     text-align: center;
     background-color: #0e0e0e;
-    padding: 8rem 0
+    padding: 8rem 0;
 }
 
 .join-community .box {
@@ -1232,7 +1232,7 @@ html:lang(ru) #header .btn {
     left: 0;
     top: 0;
     height: 100%;
-    background: url(../images/border-left1.png) no-repeat left top;
+    /* background: url(../images/border-left1.png) no-repeat left top; */
     width: 3rem
 }
 
@@ -1242,14 +1242,26 @@ html:lang(ru) #header .btn {
     right: 0;
     top: 0;
     height: 100%;
-    background: url(../images/border-right1.png) no-repeat right top;
+    /* background: url(../images/border-right1.png) no-repeat right top; */
     width: 3rem
 }
 
 .join-community .box .inner-box {
-    background: url(../images/border-tb1.png) repeat-x top center;
+    /* background: url(../images/border-tb1.png) repeat-x top center;  */
     height: 100%;
-    padding: 3rem 3rem
+    padding: 3rem 3rem;
+    background-color: rgba(28, 32, 17, 0.4);
+    clip-path: polygon(
+        35px 0,
+        calc(100% - 35px) 0,
+        100% 35px,
+        100% calc(100% - 35px),
+        calc(100% - 35px) 100%,
+        35px 100%,
+        0 calc(100% - 35px),
+        0 35px
+    );
+    /* border-radius: 5px; */
 }
 
 @media (max-width: 768px) {
@@ -1696,10 +1708,9 @@ html:lang(ru) #header .btn {
     background-size: cover
 }
 
-.about-section1 .box{
+/* .about-section1 .box{
     border-radius: 16px; 
-    /* height: 200px; */
-}
+} */
 
 
 
@@ -1799,7 +1810,7 @@ html:lang(ru) #header .btn {
     height: 100%;
     background-color: #1f1f1f;
     z-index: 0;
-    border-radius: 27px;
+    /* border-radius: 27px; */
 }
 
 .about-section .box>.row {
@@ -1831,7 +1842,7 @@ html:lang(ru) #header .btn {
 .value-section {
     background-color: #1a1a1a;
     padding: 4rem 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -1850,7 +1861,13 @@ html:lang(ru) #header .btn {
 }
 
 .value-section .image {
-    margin-top: -1rem;
+    margin-top: 0rem;
+    position:absolute;
+    width: 500px;
+    bottom: 250px;
+    top: -1px;
+    right: 50px;
+
 }
 
 .value-section .btn {
@@ -2031,7 +2048,7 @@ html:lang(ru) #header .btn {
 
 .static-content {
     padding-bottom: 7rem;
-    padding-top: 15rem;
+    padding-top: 7rem;
     color: #fff;
     background: #0e0e0e url(../images/bg11.jpg) top center no-repeat;
     background-size: 100% auto;
@@ -2052,7 +2069,7 @@ html:lang(ru) #header .btn {
 
 .static-content p,
 .static-content li {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.8em
 }
 
@@ -2254,9 +2271,24 @@ html:lang(ru) #header .btn {
     .value-section h2 {
         font-size: 2rem
     }
+    
+    .value-section {
+        position: relative;
+        overflow: hidden;
+    }
+    
 
     .value-section p {
         font-size: 1.175rem
+    }
+
+    .value-section .image {
+        margin-top: 0;
+        position:relative; 
+        width: auto;
+        bottom: 0px;
+        top: 0px;
+        right: 0px;
     }
 
     .started-steps {
@@ -2910,7 +2942,12 @@ html:lang(ru) #header .btn {
     }
 
     .value-section .image {
-        margin-top: 0
+        margin-top: 0;
+        position:relative; 
+        width: auto;
+        bottom: 100px;
+        top: 250px;
+        right: 0px;
     }
 
     .started-steps .container {
@@ -3086,7 +3123,7 @@ html:lang(ru) #header .btn {
     }
 
     .static-content {
-        padding-top: 10rem;
+        padding-top: 3rem;
         padding-bottom: 3rem
     }
 
