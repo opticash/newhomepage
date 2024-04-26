@@ -72,7 +72,48 @@
         </nav>
         <div id="w-node-_6dbb51e1-c79e-6e61-e144-35a2c94a8b57-9bc87bc0" class="navbar_button-wrapper">
           <a href="signup.html" class="nav-button-secondary w-button">Sign Up</a>
-          <a href="https://app.opticash.io/auth/sign-in" class="nav-button w-button">Log In</a>
+          <a href="#" id="myButton" class="nav-button w-button">Log In</a>
+          <!-- <a href="https://app.opticash.io/auth/sign-in" class="nav-button w-button">Log In</a> -->
+          <!--- -->
+          <div id="myPopup" class="popup">
+            <div class="popup-content">
+              <span class="login-pop">
+                Page being updated for launch
+              </span>
+              <p class="login-pop--text">We Apologize for the inconvenience</p>
+              <button id="closePopup">
+                Close
+              </button>
+            </div>
+          </div>
+
+          <script>
+            myButton.addEventListener(
+              "click",
+              function () {
+                myPopup.classList.add("show");
+              }
+            );
+            closePopup.addEventListener(
+              "click",
+              function () {
+                myPopup.classList.remove(
+                  "show"
+                );
+              }
+            );
+            window.addEventListener(
+              "click",
+              function (event) {
+                if (event.target == myPopup) {
+                  myPopup.classList.remove(
+                    "show"
+                  );
+                }
+              }
+            );
+          </script>
+          <!---->
         </div>
         <div class="rl_navbar2_menu-button-2 w-nav-button">
           <div class="rl_menu-icon2-2">
