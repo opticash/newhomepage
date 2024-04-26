@@ -3289,4 +3289,17 @@ html:lang(ru) #header .btn {
     padding: 5px 10px;
 }
 
+.blog-message {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 50px 0px;
+}
+
+.blog-image {
+    width: 300px;
+    margin-top: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
