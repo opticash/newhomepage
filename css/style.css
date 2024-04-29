@@ -3349,3 +3349,40 @@ html:lang(ru) #header .btn {
 } */
 
 /*# sourceMappingURL=style.css.map */
+.image-src {
+    display: none;
+    /* Hide all by default */
+    width: 100%;
+    /* Make images responsive */
+}
+
+/* Display the appropriate image based on viewport width */
+@media (max-width: 479px) {
+    #img-small {
+        display: block;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #img-medium {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #img-large {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+    #img-xlarge {
+        display: block;
+    }
+}
+
+@media (min-width: 1440px) {
+    #img-xxlarge {
+        display: block;
+    }
+}
