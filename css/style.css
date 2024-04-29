@@ -3302,4 +3302,50 @@ html:lang(ru) #header .btn {
     margin-top: 30px;
 }
 
+.header_image {
+    width: 100%;
+    /* Adjust the width as necessary */
+    height: 400px;
+    /* Set a fixed height or make it responsive */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    /* Retaining your original opacity setting */
+    transform: translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    transition: opacity 0.5s ease;
+    /* Example transition for opacity */
+}
+
+/* Different images for different viewport widths */
+@media (max-width: 479px) {
+    .header_image {
+        background-image: url('images/opti-img-p-500.png');
+    }
+}
+
+@media (max-width: 767px) {
+    .header_image {
+        background-image: url('images/opti-img-p-800.png');
+    }
+}
+
+@media (max-width: 991px) {
+    .header_image {
+        background-image: url('images/opti-img-p-1080.png');
+    }
+}
+
+@media (max-width: 1439px) {
+    .header_image {
+        background-image: url('images/opti-img-p-1600.png');
+    }
+}
+
+@media (min-width: 1440px) {
+    .header_image {
+        background-image: url('images/opti-img-p-2000.png');
+    }
+}
+
 /*# sourceMappingURL=style.css.map */
