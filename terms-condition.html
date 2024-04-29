@@ -77,7 +77,8 @@
 						<a href="blog.html" class="navbar_link w-nav-link">Blog</a>
 						<div class="navbar_button-wrapper mobile">
 							<a href="signup.html" class="nav-button-secondary w-button">Sign Up</a>
-							<a href="https://app.opticash.io/auth/sign-in" class="nav-button w-button">Log In</a>
+							<!-- <a href="https://app.opticash.io/auth/sign-in" class="nav-button w-button">Log In</a> -->
+							<a href="#" id="myButton2" class="nav-button w-button">Log In</a>
 						</div>
 						<a data-w-id="49b650ed-7329-42eb-cee8-e1c264af78ca" href="#"
 							class="consent_close-button-copy w-inline-block">
@@ -93,43 +94,15 @@
 						<a href="#" id="myButton" class="nav-button w-button">Log In</a>
 						<!-- <a href="https://app.opticash.io/auth/sign-in" class="nav-button w-button">Log In</a> -->
 						<!--- -->
-						<div id="myPopup" class="popup">
-							<div class="popup-content">
-								<span class="login-pop">
-									Page being updated for launch
-								</span>
-								<p class="login-pop--text">We Apologize for the inconvenience</p>
-								<button id="closePopup">
-									Close
-								</button>
-							</div>
-						</div>
 
 						<script>
 							myButton.addEventListener(
 								"click",
 								function () {
-									myPopup.classList.add("show");
+									signupDialog.show();
 								}
 							);
-							closePopup.addEventListener(
-								"click",
-								function () {
-									myPopup.classList.remove(
-										"show"
-									);
-								}
-							);
-							window.addEventListener(
-								"click",
-								function (event) {
-									if (event.target == myPopup) {
-										myPopup.classList.remove(
-											"show"
-										);
-									}
-								}
-							);
+
 						</script>
 						<!---->
 					</div>
@@ -898,6 +871,32 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade promocional-dialog" id="signupDialog" aria-hidden="true"
+		aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<button type="button" class="dialog-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="row">
+					<div class="col-12" style="text-align: center;">
+						<h3>Page being updated for launch</h3>
+						<p class="login-pop--text">We Apologize for the inconvenience</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var signupDialog = new bootstrap.Modal(document.getElementById('signupDialog'), {
+			keyboard: false
+		})
+
+		myButton2.addEventListener(
+			"click",
+			function () {
+				signupDialog.show();
+			}
+		);
+	</script>
 	<script type="text/javascript">
 		//|| navigator.userLanguage || navigator.languages;
 		var userLang = navigator.language;
