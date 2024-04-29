@@ -3318,7 +3318,7 @@ html:lang(ru) #header .btn {
 }
 
 /* Different images for different viewport widths */
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
     .header_image {
         background-image: url('images/opti-img-p-500.png');
     }
@@ -3346,6 +3346,6 @@ html:lang(ru) #header .btn {
     .header_image {
         background-image: url('images/opti-img-p-2000.png');
     }
-}
+} */
 
 /*# sourceMappingURL=style.css.map */
