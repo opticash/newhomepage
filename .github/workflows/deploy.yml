@@ -1,0 +1,35 @@
+run-name: Deploying to Production Server
+name: Deploy to production
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Copy SSH private key
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+        run: echo $PRIVATE_KEY > ~/.ssh/id_ed25519
+
+      - name: Sync Server and Repo
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+        run: |
+          rsync -anv --delete --exclude=.vscode,.github,.git ./ $SERVER_USERNAME@$SERVER_HOST:/var/www/html/opticashio
+          
